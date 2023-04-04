@@ -2873,6 +2873,13 @@ footer {
           box-shadow: 0px 30px 100px rgba(13, 13, 14, 0.11);
   border-radius: 15px;
   font-size: 16px; }
+.total-basket.tb-1000 {
+    width: 27%;
+    position: fixed;
+    z-index: 10;
+    background: #fff;
+    margin-left: 20px;
+}
   .total-basket__footer {
     width: 100%;
     display: -webkit-box;
@@ -5537,6 +5544,9 @@ a.form-filter-mobile__category__links:hover {
     margin: 0 28px 0 auto; }
   .total-basket {
     padding: 25px; }
+  .total-basket.tb-1000 {
+    margin-left: 10px;
+  }
   .basket-card {
     font-size: 14px;
     padding: 7px 15px 8px 7px; }
@@ -6776,25 +6786,26 @@ a.form-filter-mobile__category__links:hover {
     .b-768 {
         display: block;
     }
-    .b-768 .total-basket {
-        width: 80%;
+    .b-768.total-basket {
+        max-width: 568px;
+        width: 100%;
         padding: 25px;
         margin: 0 auto;
         margin-top: 35px;
         margin-bottom: 40px;
     }
-    .b-768 .total-basket p:not(:last-child) {
+    .b-768.total-basket p:not(:last-child) {
         margin-bottom: 5px;
     }
     .b-768 .total-basket__footer {
         flex-direction: row;
     }
-    .b-768 .total-basket .label-promo {
+    .b-768.total-basket .label-promo {
         width: 254px;
         margin-right: 10px;
         margin-bottom: 0;
     }
-    .b-768 .total-basket .btn {
+    .b-768.total-basket .btn {
         width: 254px;
     }
     .total-basket__wrap {
@@ -7576,8 +7587,8 @@ a.form-filter-mobile__category__links:hover {
     width: calc(100% + 32px);
     margin: 0 -16px;
     padding: 0 16px; } */
-    .b-768 .total-basket .label-promo,
-    .b-768 .total-basket .btn {
+    .b-768.total-basket .label-promo,
+    .b-768.total-basket .btn {
         width: 194px;
     }
   .total-basket__footer {
@@ -8549,14 +8560,19 @@ a.form-filter-mobile__category__links:hover {
     .order__form {
         gap: 15px;
     }
-    .b-768 .total-basket {
+    .b-768.total-basket {
         width: 100%;
         margin-bottom: 20px;
     }
-    .b-768 .total-basket__footer {
+    .b-768.total-basket__footer {
         gap: 10px;
     }
-    .b-768 .total-basket .label-promo, .total-basket .btn {
+    .b-768.total-basket .label-promo, .b-768.total-basket .btn {
+        max-width: 288px;
         width: 100%;
+    }
+    .b-768 .total-basket__footer {
+        flex-direction: column;
+        gap: 10px;
     }
 }
