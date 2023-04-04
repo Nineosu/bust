@@ -2875,10 +2875,16 @@ footer {
   font-size: 16px; }
 .total-basket.tb-1000 {
     width: 27%;
-    position: fixed;
-    z-index: 10;
     background: #fff;
     margin-left: 20px;
+}
+.fixed-position {
+    position: fixed;
+    z-index: 10;
+    width: 27%;
+}
+.total-basket.static-position {
+    position: absolute;
 }
   .total-basket__footer {
     width: 100%;

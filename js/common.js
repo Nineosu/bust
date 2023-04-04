@@ -392,3 +392,42 @@ $('.sidebar-category-dropdown').on('click', function (e) {
     e.preventDefault();
     $(this).siblings('.sidebar-menu').toggleClass('open');
 });
+
+
+// fixed basket 
+const totalBasket = document.querySelector('.total-basket.tb-1000');
+const orderForm = document.querySelector('.order__form-block');
+const topPosition = {
+    '1920px': '1130px',
+    '1000px': '983px'
+}
+
+if (totalBasket) {
+    window.addEventListener('scroll', () => {
+        if (window.innerWidth >= 1920) {
+            if (orderForm.getBoundingClientRect().bottom <= 589) {
+                totalBasket.classList.remove('fixed-position');
+                totalBasket.classList.add('static-position');
+                totalBasket.style.top = topPosition['1920px']
+                totalBasket.style.width = '100%';
+            } else {
+                totalBasket.classList.add('fixed-position');
+                totalBasket.classList.remove('static-position');
+                totalBasket.style.top = '';
+                totalBasket.style.width = '';
+            }
+        } else {
+            if (orderForm.getBoundingClientRect().bottom <= 589) {
+                totalBasket.classList.remove('fixed-position');
+                totalBasket.classList.add('static-position');
+                totalBasket.style.top = topPosition['1000px']
+                totalBasket.style.width = '100%';
+            } else {
+                totalBasket.classList.add('fixed-position');
+                totalBasket.classList.remove('static-position');
+                totalBasket.style.top = '';
+                totalBasket.style.width = '';
+            }
+        }
+    });
+};
