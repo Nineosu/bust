@@ -102,17 +102,22 @@
     border: 1px solid rgba(176, 177, 191, 0.3);
 }
 .total-basket.tb-1000 {
-    width: 27%;
+    width: 28%;
     background: #fff;
     margin-left: 20px;
 }
 .fixed-position {
     position: fixed;
+    top: 30%;
+    right: 5%;
     z-index: 10;
     width: 27%;
 }
 .total-basket.static-position {
     position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 31%;
 }
 
 .label-promo {

@@ -404,29 +404,14 @@ const topPosition = {
 
 if (totalBasket) {
     window.addEventListener('scroll', () => {
-        if (window.innerWidth >= 1920) {
-            if (orderForm.getBoundingClientRect().bottom <= 589) {
+        if (window.innerWidth > 1000) {
+            console.log(document.querySelector('.form__bottom').getBoundingClientRect().bottom);
+            if (document.querySelector('.form__bottom').getBoundingClientRect().bottom <= 600) {
                 totalBasket.classList.remove('fixed-position');
                 totalBasket.classList.add('static-position');
-                totalBasket.style.top = topPosition['1920px']
-                totalBasket.style.width = '100%';
-            } else {
+            }  else {
                 totalBasket.classList.add('fixed-position');
                 totalBasket.classList.remove('static-position');
-                totalBasket.style.top = '';
-                totalBasket.style.width = '';
-            }
-        } else {
-            if (orderForm.getBoundingClientRect().bottom <= 589) {
-                totalBasket.classList.remove('fixed-position');
-                totalBasket.classList.add('static-position');
-                totalBasket.style.top = topPosition['1000px']
-                totalBasket.style.width = '100%';
-            } else {
-                totalBasket.classList.add('fixed-position');
-                totalBasket.classList.remove('static-position');
-                totalBasket.style.top = '';
-                totalBasket.style.width = '';
             }
         }
     });
