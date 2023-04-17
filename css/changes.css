@@ -339,6 +339,9 @@ height: 183px; }
     .t-b {
         display: none;
     }
+    .total-basket.tb-1000 {
+        display: none;
+    }
     .b-768 {
         display: block;
     }
